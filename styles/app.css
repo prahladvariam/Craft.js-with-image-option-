@@ -39,3 +39,14 @@ body {
   padding: 10px 0.5rem;
   border-top: 1px solid rgb(0 0 0 / 6%);
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+/* table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+} */

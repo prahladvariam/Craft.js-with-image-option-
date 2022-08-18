@@ -105,6 +105,7 @@ export const ToolbarTextInput = ({
       <TextField
         label={label}
         style={{ margin: 0, width: '100%' }}
+        type={type}
         value={internalValue || ''}
         onKeyDown={(e) => {
           if (e.key === 'Enter') {

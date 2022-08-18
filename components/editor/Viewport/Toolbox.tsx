@@ -8,11 +8,13 @@ import SquareSvg from '../../../public/icons/toolbox/rectangle.svg';
 import TypeSvg from '../../../public/icons/toolbox/text.svg';
 import YoutubeSvg from '../../../public/icons/toolbox/video-line.svg';
 import ImagesSvg from '../../../public/icons/toolbox/image-solid.svg';
+import TableSvg from '../../../public/icons/toolbox/table.svg';
 import { Button } from '../../selectors/Button';
 import { Container } from '../../selectors/Container';
 import { Text } from '../../selectors/Text';
 import { Video } from '../../selectors/Video';
-import { Images } from '../../selectors/Image'
+import { Images } from '../../selectors/Image';
+import { Table } from 'components/selectors/Table';
 
 const ToolboxDiv = styled.div<{ enabled: boolean }>`
   transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
@@ -97,6 +99,13 @@ export const Toolbox = () => {
           <Tooltip title="Image" placement="right">
             <Item className="m-2 pb-2 cursor-pointer block" move>
               <ImagesSvg />
+            </Item>
+          </Tooltip>
+        </div>
+        <div ref={(ref) => create(ref, <Table />)}>
+          <Tooltip title="Table" placement="right">
+            <Item className="m-2 pb-2 cursor-pointer block" move>
+              <TableSvg />
             </Item>
           </Tooltip>
         </div>

@@ -44,8 +44,10 @@
     "@types/styled-components": "4.1.20",
     "babel-plugin-inline-react-svg": "1.1.0",
     "cross-env": "6.0.3",
+    "list-react-files": "^0.2.0",
     "postcss-import": "12.0.1",
     "postcss-preset-env": "6.7.0",
+    "require-context": "^1.1.0",
     "tailwindcss": "latest",
     "typescript": "3.9.10"
   }

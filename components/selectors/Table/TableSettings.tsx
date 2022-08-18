@@ -4,29 +4,10 @@ import { useState } from 'react';
 import { ToolbarSection, ToolbarItem } from '../../editor';
 import { ToolbarRadio } from '../../editor/Toolbar/ToolbarRadio';
 
-export const ImageSettings = () => {
+export const TableSettings = () => {
 	const [image, setImage] = useState(null);
 	const [createObjectURL, setCreateObjectURL] = useState(null);
 	
-	const uploadToClient = (event) => {
-		if (event.target.files && event.target.files[0]) {
-			const i = event.target.files[0];
-			
-			setImage(i);
-			setCreateObjectURL(URL.createObjectURL(i));
-		}
-	};
-	
-	const uploadToServer = async (event) => {
-		const body =  new FormData();
-		body.append("file", image);
-		const response = await fetch("/public/upload/", {
-			method: "POST",
-			body
-		});	
-	};
-  
-  
   return (
     <React.Fragment>
       <ToolbarSection
@@ -144,9 +125,10 @@ export const ImageSettings = () => {
         </ToolbarItem>
       </ToolbarSection>
       <ToolbarSection
-        title="Image Change"
+        title="Rows and Column"
       >
-		<ToolbarItem propKey="url" type="text" label="url" />
+		<ToolbarItem propKey="rows" type="number" label="rows" />
+		<ToolbarItem propKey="columns" type="number" label="columns" />
       </ToolbarSection>
     </React.Fragment>
   );

@@ -51,7 +51,8 @@ export const Button: UserComponent<ButtonProps> = (props: any) => {
     >
       <Text {...textComponent} text={text} color={props.color} />
     </StyledButton>
-  );
+
+);
 };
 
 Button.craft = {
